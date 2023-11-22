@@ -1,0 +1,419 @@
+/* fonts */
+@import url(./fonts.css);
+
+/* key frames */
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* variables */
+:root {
+    --activeLink: #ff5252;
+    --hoverBtn: #5b24c9;
+    --primaryBtn: #212121;
+    --containerMargin: 0 auto;
+    --containerWidth: calc(100% - 96px);
+    --FixelText: FixelText, sans-serif;
+    --Jost: Jost, sans-serif;
+    --borderColor: #ebebeb;
+    --light: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .25s ease;
+}
+
+/* fallbacks */
+
+div.fallBack {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 900;
+    background-color: #00000080;
+    left: 0;
+    top: 0;
+}
+
+div.fallBack.hide {
+    display: none;
+}
+
+/* header starts */
+/* top of header */
+div.headerContainer {
+    width: var(--containerWidth);
+    display: flex;
+    margin: var(--containerMargin);
+    font-size: 14px;
+    font-family: var(--Jost);
+    height: 40px;
+    align-items: center;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+a.headerAds {
+    flex-grow: 1;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--primaryBtn);
+}
+
+a.headerAds:hover {
+    color: var(--hoverBtn);
+}
+
+a.headerAds.headerBeauty {
+    justify-content: flex-end;
+}
+
+a.headerAds.headerAd {
+    justify-content: flex-start;
+}
+
+ul.headerMenu {
+    justify-content: center;
+    flex-grow: 2;
+    display: flex;
+    grid-area: 5px;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+ul.headerMenu>li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+}
+
+ul.headerMenu>li>a {
+    text-decoration: none;
+    font-weight: 100;
+    color: var(--primaryBtn);
+}
+
+ul.headerMenu>li>a:hover {
+    color: var(--hoverBtn);
+}
+
+ul.headerMenu>li>a.active {
+    color: var(--activeLink);
+}
+
+/* rest of header */
+div.header {
+    width: var(--containerWidth);
+    margin: var(--containerMargin);
+    height: 86px;
+    padding-top: 18px;
+}
+
+div.header>header {
+    height: 100%;
+}
+
+div.headerTop {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+
+a.headerLogo {
+    display: flex;
+    align-items: center;
+    flex-grow: 2;
+    height: 100%;
+    justify-content: center;
+}
+
+a.headerLogo>img {
+    height: 52px;
+    width: auto;
+}
+
+div.headerBottom {
+    width: 100%;
+    height: 56px;
+    padding-top: 16px;
+}
+
+ul.hB-Menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+ul.hB-Menu>li {
+    padding: 8px 16px;
+}
+
+ul.hB-Menu>li:nth-child(1) {
+    padding-left: 0;
+}
+
+ul.hB-Menu>li:nth-last-child(1) {
+    padding-right: 0;
+}
+
+ul.hB-Menu>li>a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primaryBtn);
+    font-family: var(--FixelText);
+}
+
+ul.hB-Menu>li>a:hover {
+    color: var(--hoverBtn);
+}
+
+/* search box container */
+
+div.search {
+    flex-grow: 1;
+}
+
+div.searchContainer {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    align-items: center;
+    padding: 0 20px 0 10PX;
+    gap: 20px;
+    color: var(--primaryBtn);
+    background-color: var(--light);
+}
+
+div.searchContainer.hide {
+    position: static;
+    width: auto;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    flex-grow: 1;
+}
+
+div.searchContainer>i {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--primaryBtn);
+}
+
+div.searchContainer>i.hide {
+    display: none;
+}
+
+div.searchContainer>input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    font-size: 16px;
+    font-family: var(--Jost);
+    padding-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+div.searchContainer>input.hide {
+    display: none !important;
+}
+
+/* login container */
+
+div.login-cart {
+    gap: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    position: relative;
+}
+
+div.login-cart>i {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--primaryBtn);
+}
+
+div.loginContainer {
+    display: none;
+}
+
+div.loginContainer.show {
+    position: absolute;
+    z-index: 901;
+    top: 100%;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 20px;
+    font-family: var(--Jost);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--light);
+    min-width: 325px;
+    max-width: 80vw;
+}
+
+div.loginContainer.show>form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+div.loginContainer.show>form>div {
+    position: relative;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding-top: 10px;
+}
+
+div.loginContainer.show>form>div>input {
+    padding: 8px 24px 8px 0;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    line-height: 1;
+    height: max-content;
+    width: 100%;
+}
+
+div.loginContainer.show>form>div::before {
+    content: "";
+    z-index: 902;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--borderColor);
+}
+
+div.loginContainer.show>form>div::after {
+    content: "";
+    z-index: 903;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    height: 2px;
+    background-color: var(--hoverBtn);
+    transition: all .25s ease;
+}
+
+div.loginContainer.show>form>div.activeAfter::after {
+    transform: scaleX(1) !important;
+}
+
+div.loginContainer.show>form>div>label {
+    position: absolute;
+    line-height: 1;
+    left: 0;
+    bottom: 8px;
+    font-size: 14px;
+}
+
+div.loginContainer.show>form>div>label.focused {
+    bottom: calc(100% + 3px);
+    transform: translateY(100%);
+    font-size: 12px;
+    color: var(--hoverBtn);
+}
+
+div.loginContainer.show>form>div>i.showPass {
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--primaryBtn);
+}
+
+div.loginContainer.show>form>div>i.showPass {
+    color: var(--hoverBtn);
+}
+
+div.loginContainer.show>form>button {
+    margin-top: 10px;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 0;
+    background-color: var(--primaryBtn);
+    color: var(--light);
+    cursor: pointer;
+}
+
+div.loginContainer.show>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: var(--primaryBtn);
+}
+
+div.loginContainer.show>div>button {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+div.loginContainer.show>div>button:hover {
+    color: var(--hoverBtn);
+}
+
+div.loginContainer.show>div>a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+div.loginContainer.show>div>a:hover {
+    color: var(--hoverBtn);
+}

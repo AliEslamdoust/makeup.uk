@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="height=device-height, 
+      width=device-width, initial-scale=1.0, 
+      minimum-scale=1.0, maximum-scale=1.0, 
+      user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./FontAwesome/css/all.css" />
+  </head>
+  <body>
+    <div class="headerContainer">
+      <a href="#" class="headerAds headerAd"><p>100% authentic products!</p></a>
+      <ul class="headerMenu">
+        <li><a href="#" class="active">Special offers</a></li>
+        <li><a href="#">Delivery and Payments</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+      <a href="#" class="headerAds headerBeauty"
+        ><span class="fas fa-star"></span>
+        <p>Beauty Club</p></a
+      >
+    </div>
+    <div class="header">
+      <header>
+        <div class="headerTop">
+          <div class="fallBack hide" id="searchFallBack"></div>
+          <div class="searchContainer hide" id="searchContainer">
+            <i class="fa-duotone fa-magnifying-glass" id="searchBtn"></i>
+            <input
+              type="text"
+              name="search"
+              id="searchInput"
+              autocomplete="off"
+              placeholder="More than 164,000 products"
+              class="hide"
+            />
+            <i class="fa-light fa-xmark hide" id="searchClose"></i>
+          </div>
+          <a href="#" class="headerLogo">
+            <img src="./media/logo.svg" alt="" />
+          </a>
+          <div class="login-cart">
+            <div class="fallBack hide" id="loginFallBack"></div>
+            <i class="fa-light fa-user" id="loginBtn"></i>
+            <i class="fa-light fa-bag-shopping"></i>
+            <div class="loginContainer" id="loginContainer">
+              <h3>Log in</h3>
+              <form>
+                <div class="inputContainer">
+                  <input
+                    type="email"
+                    name="email"
+                    id="emailInput"
+                    autocomplete="off"
+                    required
+                    class="loginInput"
+                  />
+                  <label for="email" class="loginLabel">E-mail:</label>
+                </div>
+                <div class="inputContainer">
+                  <input
+                    type="password"
+                    name="pass"
+                    id="passInput"
+                    autocomplete="off"
+                    required
+                    class="loginInput"
+                  />
+                  <label for="pass" class="loginLabel">Password:</label>
+                  <i class="fa-light fa-eye showPass" id="showPass"></i>
+                </div>
+                <button type="submit">Log in</button>
+              </form>
+              <div>
+                <button>Forgot your password?</button><a href="#">Sign up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="headerBottom">
+          <ul class="hB-Menu">
+            <li><a href="#">Perfumes</a></li>
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Hiar</a></li>
+            <li><a href="#">Face</a></li>
+            <li><a href="#">Bath & Beauty</a></li>
+            <li><a href="#">For Men</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Health & Care</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Clothes</a></li>
+            <li><a href="#">Brands</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
