@@ -4,8 +4,4 @@
     font-weight: 500, 400, 700;
 }
 
-@font-face {
-    font-family: Jost;
-    src: url(../fonts/Jost-Medium.ttf), url(../fonts/Jost-Regular.ttf), url(../fonts/Jost-SemiBold.ttf);
-    font-weight: 500, 400, 700;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');

@@ -44,12 +44,16 @@
     --activeLink: #ff5252;
     --hoverBtn: #5b24c9;
     --primaryBtn: #212121;
+    --primaryBtnLightened: #212121E6;
     --containerPadding: 48px;
     --containerWidth: calc(100% - 96px);
     --FixelText: FixelText, sans-serif;
     --Jost: Jost, sans-serif;
     --borderColor: #ebebeb;
     --light: #fff;
+    --disActiveColor: #8f8f8f;
+    --secondaryBg: #FAFAFA;
+    --lightText: #a6a2a2;
 }
 
 * {
@@ -79,9 +83,9 @@ div.fallBack.hide {
 /* header starts */
 /* top of header */
 div.headerContainer {
-    background-color: var(--light);
     display: flex;
     width: 100%;
+    background-color: var(--light);
     padding-left: var(--containerPadding);
     padding-right: var(--containerPadding);
     font-size: 14px;
@@ -677,4 +681,260 @@ div.sliderPagination>span.active {
     width: 20px;
     background-color: var(--primaryBtn);
     border-color: var(--light);
+}
+
+
+/* products slider */
+div.productSlider {
+    width: 100%;
+    background-color: var(--light);
+    padding-left: var(--containerPadding);
+    padding-right: var(--containerPadding);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--FixelText);
+    color: var(--primaryBtn);
+}
+
+div.pSliderHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+div.pSliderHeader>h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+div.pSliderNavigation {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+div.pSliderNavigation>span {
+    color: var(--primaryBtn);
+    cursor: pointer;
+    outline: none;
+}
+
+div.pSliderNavigation>span.swiper-button-disabled {
+    color: var(--disActiveColor);
+    cursor: not-allowed;
+}
+
+div.pSliderBody {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+div.sliderBodyContainer {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.pSlider {
+    width: 23%;
+    min-width: 290px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+a.pSliderTop {
+    width: 100%;
+    position: relative;
+    background-color: var(--secondaryBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 32px;
+}
+
+a.pSliderTop>img {
+    width: 90%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+a.pSliderTop>span.new {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: var(--primaryBtn);
+    color: var(--secondaryBg);
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+a.pSliderTop>div.like {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: var(--light);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.pSliderTop:hover>div.like {
+    opacity: 1;
+}
+
+a.pSliderTop>div.like>i::before {
+    transition: all .25s linear;
+    line-height: 1;
+}
+
+div.pSliderBottom {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+div.pSliderHeading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--primaryBtn);
+}
+
+div.pSliderHeading>a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    margin: 16px 20px 0 0;
+    line-height: 1;
+}
+
+div.pSliderHeading>a:hover {
+    color: var(--hoverBtn);
+}
+
+div.pSliderHeading>span {
+    line-height: 1;
+    font-size: 14px;
+    color: var(--lightText);
+}
+
+div.pSliderRating {
+    display: flex;
+    flex-direction: column;
+}
+
+div.pSliderStars {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 12px;
+    align-items: center;
+    color: var(--primaryBtn);
+}
+
+div.pSliderStars>span {
+    font-size: 12px;
+    line-height: 1;
+}
+
+div.pSliderStars>a.pSliderVotes {
+    line-height: 1;
+    font-size: 14px;
+    margin-left: 7px;
+    display: block;
+    font-size: 200;
+    font-family: var(--Jost);
+    color: inherit;
+    text-decoration: none;
+}
+
+div.pSliderStars>a.pSliderVotes:hover {
+    color: var(--hoverBtn);
+}
+
+div.pSliderRating>span.pSliderPrice {
+    font-size: 14px;
+    margin-top: 6px;
+    font-family: var(--Jost);
+    font-weight: 300;
+    line-height: 2;
+}
+
+div.pSliderButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+div.pSliderButtons>button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    line-height: 3;
+    cursor: pointer;
+}
+
+div.pSliderButtons>button.pSliderDescription {
+    background-color: transparent;
+    color: var(--primaryBtn);
+    border: 1px solid var(--primaryBtn);
+}
+
+div.pSliderButtons>button.pSliderBuy {
+    background-color: var(--primaryBtn);
+    border: unset;
+    color: var(--lightText);
+}
+
+div.pSliderButtons>button.pSliderBuy:hover {
+    background-color: var(--primaryBtnLightened);
+}
+
+div.pSlider:hover div.pSliderButtons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

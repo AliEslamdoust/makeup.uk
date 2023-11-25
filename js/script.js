@@ -207,3 +207,29 @@ paginationBtn.forEach((elem, index) => {
 function clearPagination() {
   paginationBtn.forEach((elem) => elem.classList.remove("active"));
 }
+
+// fill likes heart after mouse over
+let likes = document.querySelectorAll(".like");
+let heart = document.querySelectorAll(".like>i");
+likes.forEach((elem, index) => {
+  elem.addEventListener("mouseover", function () {
+    heart[index].classList.toggle("fa-solid");
+    heart[index].classList.toggle("fa-light");
+  });
+  elem.addEventListener("mouseout", function () {
+    heart[index].classList.toggle("fa-solid");
+    heart[index].classList.toggle("fa-light");
+  });
+});
+
+// swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4.5,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
