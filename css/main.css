@@ -510,10 +510,10 @@ ul.hB-Menu>li:hover>div.submenu {
 div.submenu {
     position: absolute;
     z-index: 900;
-    left: -48px;
-    padding: 0 48px 56px;
+    left: 0;
+    padding: 0 var(--containerPadding) 56px;
     top: 100%;
-    width: calc(100% + 96px);
+    width: 100%;
     background-color: var(--light);
     flex-direction: column;
     font-family: var(--Jost);
@@ -676,6 +676,10 @@ div.slider>a>img {
     height: auto;
 }
 
+div.slider>a>img.littleImg {
+    display: none;
+}
+
 div.sliderNavigation>i {
     color: var(--light);
     font-size: 40px;
@@ -755,7 +759,6 @@ div.pSliderHeader {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
     margin-bottom: 32px;
 }
 
@@ -1212,7 +1215,7 @@ div.joinLetter>form {
     position: relative;
     min-width: 200px;
     max-width: 400px;
-    width: 70%;
+    width: 100%;
 }
 
 div.joinLetter>form>input {
@@ -1281,12 +1284,16 @@ div.footerMenuTop {
     border-bottom: 1px solid var(--borderColor);
     padding: 20px var(--containerPadding);
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
+    row-gap: 10px;
 }
 
 div.fmtLeft {
     display: flex;
+    flex-wrap: wrap;
     width: 50%;
+    gap: 10px;
 }
 
 div.fmtLeft>ul {

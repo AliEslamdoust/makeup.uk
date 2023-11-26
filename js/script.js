@@ -274,6 +274,27 @@ for (index in swipersCount) {
   });
 }
 
+// revies slider
+var swiper = new Swiper(`.rSwiper`, {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: `.rswiper-button-next`,
+    prevEl: `.rswiper-button-prev`,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+  keyboard: true,
+});
+
 // special offers timing
 let specialTimes = [
   120, 24, 56, 93, 24, 90, 24, 24, 48, 24, 72, 48, 124, 100, 98, 48,
