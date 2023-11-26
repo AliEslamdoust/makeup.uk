@@ -1,0 +1,225 @@
+@media (max-width:1024px) {
+    :root {
+        --containerPadding: 24px !important;
+    }
+
+    div.headerContainer {
+        justify-content: center;
+    }
+
+    a.headerAds.headerBeauty,
+    ul.headerMenu {
+        display: none !important;
+    }
+
+    div.mobileMenu {
+        display: flex !important;
+    }
+
+    div.mobileMenuLogo {
+        display: flex;
+        height: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 20px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    div.mobileMenuLogo>span {
+        height: 1px;
+        background-color: var(--primaryBtn);
+        transition: all .25s ease !important;
+
+    }
+
+    div.mobileMenuLogo>span:nth-child(1) {
+        width: 16px;
+    }
+
+    div.mobileMenuLogo>span:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+    }
+
+    div.mobileMenuLogo>span:nth-child(3) {
+        width: 10px;
+    }
+
+    div.mobileMenuLogo.active>span:nth-child(1) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20px;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    div.mobileMenuLogo.active>span:nth-child(2) {
+        opacity: 0;
+    }
+
+    div.mobileMenuLogo.active>span:nth-child(3) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20px;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+
+    div.headerBottom {
+        padding-top: 0 !important;
+        height: 0 !important;
+        overflow: hidden;
+    }
+
+    div.headerBottom.active {
+        height: calc(100vh - 126px) !important;
+    }
+
+    ul.hB-Menu {
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: space-evenly;
+        overflow: auto;
+    }
+
+    ul.hB-Menu>li {
+        padding: 16px 0 !important;
+        border-bottom: 1px solid var(--borderColor);
+        width: 100%;
+        height: max-content !important;
+        flex-grow: 0 !important;
+    }
+
+    ul.hB-Menu>li>a {
+        display: flex !important;
+        line-height: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        height: max-content !important;
+        background-color: var(--light);
+    }
+
+    ul.hB-Menu>li>a>span {
+        font-size: 12px;
+        display: block !important;
+    }
+
+    ul.hB-Menu>li>a>span.active {
+        transform: rotate(180deg);
+    }
+
+    div.submenu {
+        position: static !important;
+        width: 100% !important;
+        animation: unset !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        height: 0 !important;
+        overflow: hidden;
+        padding: 0 20px !important;
+    }
+
+    div.submenu.active {
+        height: max-content !important;
+        padding: 20px !important;
+    }
+
+    ul.submenuTop {
+        border-top: none !important;
+        padding-top: 0 !important;
+    }
+
+    ul.submenuTop>li {
+        padding-right: 20px !important;
+    }
+
+    ul.submenuTop>li.justLastSubmenu {
+        flex-grow: 1 !important;
+    }
+
+    ul.submenuTop>li.lastSubmenu {
+        display: none;
+    }
+
+    ul.ssMenu {
+        height: max-content !important;
+    }
+
+    div.subSubmenu>span>i {
+        display: none;
+    }
+
+    ul.ssMenu>li>a {
+        font-size: inherit !important;
+    }
+
+    div.submenuBottom {
+        display: none !important;
+    }
+
+    /* login section */
+    div.loginContainer {
+        display: flex !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        position: fixed !important;
+    }
+
+    div.loginContainer.show {
+        transition: all .25s ease !;
+        display: flex !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        top: unset !important;
+        right: unset !important;
+        height: 350px !important;
+        width: 100% !important;
+        max-width: unset !important;
+        z-index: 1001;
+        justify-content: space-around;
+    }
+
+    span.loginClose {
+        display: block !important;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    div.loginContainer.show>form>button {
+        padding: 1rem 0 !important;
+    }
+
+    /* main slider */
+
+    div.sliderContainer {
+        padding: 0 !important;
+    }
+
+    /* product Ads */
+    div.adsContainer>a:nth-child(1) {
+        width: 100% !important;
+    }
+
+    div.adsContainer>a:nth-child(2) {
+        display: none !important;
+    }
+
+    /* product sliders */
+
+    div.pSlider {
+        margin-bottom: 20px;
+    }
+
+    div.pSliderButtons {
+        display: none !important;
+    }
+}

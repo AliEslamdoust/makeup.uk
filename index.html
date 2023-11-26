@@ -9,7 +9,9 @@
       minimum-scale=1.0, maximum-scale=1.0, 
       user-scalable=no, target-densitydpi=device-dpi"
     />
-    <title>Document</title>
+    <title>
+      Cosmetics & Beauty products, Fragrances at Makeup.uk online store
+    </title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./FontAwesome/css/all.css" />
     <link
@@ -19,6 +21,11 @@
     />
   </head>
   <body>
+    <!-- back to top button -->
+    <button class="backToTop" id="backToTop">
+      <span class="fas fa-arrow-up"></span>
+    </button>
+    <!-- end back to top button -->
     <!-- start header -->
     <div class="headerContainer">
       <a href="#" class="headerAds headerAd"><p>100% authentic products!</p></a>
@@ -36,6 +43,11 @@
     <div class="header">
       <header>
         <div class="headerTop">
+          <div class="mobileMenu">
+            <div class="mobileMenuLogo" id="mobileMenu">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
           <div class="fallBack hide" id="searchFallBack"></div>
           <div class="searchContainer hide" id="searchContainer">
             <i class="fa-duotone fa-magnifying-glass" id="searchBtn"></i>
@@ -57,6 +69,7 @@
             <i class="fa-light fa-user" id="loginBtn"></i>
             <i class="fa-light fa-bag-shopping"></i>
             <div class="loginContainer" id="loginContainer">
+              <span class="loginClose fa-light fa-xmark" id="loginCloseBtn"></span>
               <h3>Log in</h3>
               <form>
                 <div class="inputContainer">
@@ -90,10 +103,13 @@
             </div>
           </div>
         </div>
-        <div class="headerBottom">
+        <div class="headerBottom" id="headerBottom">
           <ul class="hB-Menu">
             <li>
-              <a href="#">Perfumes</a>
+              <a href="#"
+                >Perfumes
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -161,7 +177,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Makeup</a>
+              <a href="#"
+                >Makeup
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -271,7 +290,9 @@
               </div>
             </li>
             <li>
-              <a href="#">Hair</a>
+              <a href="#"
+                >Hair <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -396,7 +417,9 @@
               </div>
             </li>
             <li>
-              <a href="#">Face</a>
+              <a href="#"
+                >Face <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -536,7 +559,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Bath & Beauty</a>
+              <a href="#"
+                >Bath & Beauty
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -694,7 +720,10 @@
               </div>
             </li>
             <li>
-              <a href="#">For Men</a>
+              <a href="#"
+                >For Men
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -795,7 +824,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Accessories</a>
+              <a href="#"
+                >Accessories
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -918,7 +950,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Health & Care</a>
+              <a href="#"
+                >Health & Care
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -982,7 +1017,9 @@
               </div>
             </li>
             <li>
-              <a href="#">Gifts</a>
+              <a href="#"
+                >Gifts <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -1003,7 +1040,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Clothes</a>
+              <a href="#"
+                >Clothes
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -1023,7 +1063,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Brands</a>
+              <a href="#"
+                >Brands
+                <span class="fa-solid fa-chevron-down menuChevron"></span
+              ></a>
               <div class="submenu">
                 <ul class="submenuTop">
                   <li>
@@ -1093,6 +1136,7 @@
       </header>
     </div>
     <!-- end header -->
+
     <!-- slider -->
     <div class="sliderContainer" id="sliderContainer">
       <div class="slider">
@@ -1122,17 +1166,21 @@
       </div>
       <div class="sliderPagination" id="sliderPagination"></div>
     </div>
-    <div class="productSlider">
+    <!-- end header -->
+    <!-- Products Slider -->
+    <div class="productSlider pSlider0">
       <div class="pSliderHeader">
-        <h3>New Products</h3>
+        <h3>The brands recommend</h3>
         <div class="pSliderNavigation">
-          <span class="fas fa-arrow-left pSliderPrev swiper-button-prev"></span>
           <span
-            class="fas fa-arrow-right pSliderNext swiper-button-next"
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev0"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next0"
           ></span>
         </div>
       </div>
-      <div class="swiper mySwiper pSliderBody">
+      <div class="swiper mySwiper0 pSliderBody">
         <div class="swiper-wrapper sliderBodyContainer">
           <div class="swiper-slide">
             <div class="pSlider">
@@ -1409,7 +1457,1973 @@
         </div>
       </div>
     </div>
-    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <!-- second product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>New Products</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev1"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next1"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper1 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer">
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- third product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>Prefumes</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev2"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next2"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper2 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer">
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product slider -->
+
+    <!-- start product ads -->
+    <div class="adsContainer">
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd1.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd2.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+    </div>
+    <!-- end product ads -->
+
+    <!-- start product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>Makeup</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev3"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next3"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper3 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer">
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product slider -->
+
+    <!-- start product ads -->
+    <div class="adsContainer">
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd3.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd4.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+    </div>
+    <!-- end product ads -->
+
+    <!-- start product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>Hair</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev4"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next4"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper4 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer">
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product slider -->
+
+    <!-- start product ads -->
+    <div class="adsContainer">
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd5.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd6.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+    </div>
+    <!-- end product ads -->
+
+    <!-- start product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>Bath & Body</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev5"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next5"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper5 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer">
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="pSlider">
+              <a href="#" class="pSliderTop">
+                <img src="./media/product1.jpg" alt="" />
+                <span class="new">NEW</span>
+                <div class="like"><i class="fa-light fa-heart"></i></div>
+              </a>
+              <div class="pSliderBottom">
+                <div class="pSliderHeading">
+                  <a href="#">Montale Vetiver Patchouli</a>
+                  <span>Eau de Parfum</span>
+                </div>
+                <div class="pSliderRating">
+                  <div class="pSliderStars">
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-solid fa-star"></span>
+                    <span class="fa-light fa-star"></span>
+                    <a href="#" class="pSliderVotes">2</a>
+                  </div>
+                  <span class="pSliderPrice">$120</span>
+                </div>
+                <div class="pSliderButtons">
+                  <button class="pSliderDescription">
+                    <img src="./media/miniProduct1.jpg" alt="" /><span
+                      >100 ml</span
+                    >
+                  </button>
+                  <button class="pSliderBuy"><span>Buy</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product slider -->
+
+    <!-- start product ads -->
+    <div class="adsContainer">
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd5.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+      <a href="#" class="bodyAds">
+        <img src="./media/pAd6.jpg" alt="" />
+        <p>
+          Special offer will end in&nbsp;<span class="specialOfferTime"
+            >00:00:00</span
+          >
+        </p>
+      </a>
+    </div>
+    <!-- end product ads -->
+
+    <!-- start product slider -->
+    <div class="productSlider">
+      <div class="pSliderHeader">
+        <h3>Reviews from our customers about perfumes and cosmetics.</h3>
+        <div class="pSliderNavigation">
+          <span
+            class="fas fa-arrow-left pSliderPrev swiper-button-prev6"
+          ></span>
+          <span
+            class="fas fa-arrow-right pSliderNext swiper-button-next6"
+          ></span>
+        </div>
+      </div>
+      <div class="swiper mySwiper6 pSliderBody">
+        <div class="swiper-wrapper sliderBodyContainer rSlider">
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24.11.2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="rSliderTop">
+              <p>Smells amazing, long lasting.</p>
+              <div class="rUser">
+                <div class="rUserLeft">
+                  <div class="rUserLogo">
+                    <span>M</span>
+                  </div>
+                  <div class="rUserName">
+                    <p>MElissa</p>
+                    <span>24, 11, 2023, 12:21</span>
+                  </div>
+                </div>
+                <div class="rStars">
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                  <span class="fa-solid fa-star stared"></span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="rSliderBottom">
+              <img src="./media/r1.jpg" alt="" />
+              <div>
+                <p>Yves Saint Laurent Libre Eau de Parfum</p>
+                <span>Eau de Parfum</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product slider -->
+
+    <!-- start footer -->
+    <div class="footer">
+      <footer>
+        <div class="footerText">
+          <h1>Makeup.uk online store</h1>
+          <div>
+            <p>
+              MAKEUP is a multifunctional company that has been operating since
+              2009. The store now has a presence in many European countries and
+              plans to expand the business into other territories. Also, we have
+              many followers on various social networks. Buyers love our online
+              shop because we carefully follow trends and constantly add current
+              products from well-known brands to the website.
+            </p>
+            <h2>MAKEUP – stay fashionable, beautiful and healthy!</h2>
+            <p>
+              The goods you find on the site will help you create your unique
+              image and shine in any situation. Every person's dream is to make
+              a good impression, look healthy and well-kept. With a massive
+              selection of wares, you can effortlessly create the cosmetic bag
+              of your dreams!
+            </p>
+            <p>
+              The shop's catalogue offers 4.5+ thousand brands and more than 200
+              thousand decorative and skin-care cosmetics items. The website
+              features products for the face, body and hair. By the way, there
+              are also separate sections for beauty tools, supplements,
+              accessories, nail and care goods.
+            </p>
+            <h2>
+              TOP 9 unquestionable advantages of the online shop, which
+              customers like
+            </h2>
+            <ul>
+              <li>
+                The site has solutions for different categories of clients:
+                pregnant women, moms, infants, people with atopic skin, vegan or
+                medical cosmetics.
+              </li>
+              <li>
+                The store has a well-thought-out product filter that allows you
+                to sort cosmetic into categories and individual characteristics.
+              </li>
+              <li>
+                The company has put male products in a special section to make
+                it easier for young boys and gentlemen to find the perfect ware
+                for themselves.
+              </li>
+              <li>
+                Only original cosmetics and perfumes are presented here. The
+                online shop collaborates with cosmetic brands directly and
+                offers buyers genuine wares.
+              </li>
+              <li>
+                The shop provides one of the most impressive decorative
+                cosmetics and tools to create unforgettable images.
+              </li>
+              <li>
+                MAKEUP carries a vast range of perfumes. Not only can you order
+                eau de toilette or first-class perfumes, but you can also find
+                scented creams, body and hair mists or testers.
+              </li>
+              <li>
+                The website supports the worldwide initiative and tries to
+                maximise the selection of natural and organic products. The
+                range includes solutions with biodegradable packaging,
+                cruelty-free brands and brands that do not use synthetic
+                ingredients in their work.
+              </li>
+              <li>
+                Besides cosmetics, the company offers much oral hygiene and
+                sexual wellness goods.
+              </li>
+              <li>
+                We deliver wares through the UK via reliable delivery and postal
+                services at short notice. You can choose the most convenient way
+                to receive your order and pick up the parcel at any time.
+              </li>
+            </ul>
+            <h2>Why should you choose us?</h2>
+            <p>
+              MAKEUP provides a high level of service and enjoyable prices,
+              which are often lower than the market prices. Because we work
+              directly with our suppliers, we can suggest discounts and special
+              offers to our customers. Also, real people provide testimonials
+              for many of the products. It allows you to quickly and accurately
+              choose the perfect solution for yourself, find a gift or a
+              professional tool for work.
+            </p>
+            <p>
+              A further advantage of the company is the MAKEUP Beauty Club. It
+              is an opportunity for the store to keep in touch with the
+              community and inform everyone about the most exciting events
+              through a newsletter. The unique club notifies you by e-mail about
+              discounts, birthday bonuses, promotions and the best wares in the
+              different seasons. Join the mailing list and stay up to date with
+              all the exciting things happening on the site!
+            </p>
+            <p>
+              As the website has a registration option, you will be able to
+              track your order history and receive updates on the status of your
+              parcel through your account. If necessary, customers can contact
+              the support staff conveniently and get a free consultation.
+            </p>
+            <p>
+              Make your life bright, beautiful and hassle-free with makeup.uk!
+            </p>
+          </div>
+        </div>
+        <div class="joinLetter">
+          <h2>Be the first to know about sales and new arrivals!</h2>
+          <form>
+            <input type="text" name="letterEmail" required />
+            <label for="letterEmail">E-mail</label>
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="social">
+            <a href="#"><span class="fa-brands fa-facebook"></span></a>
+            <a href="#"><span class="fa-brands fa-instagram"></span></a>
+          </div>
+        </div>
+        <div class="footerMenu">
+          <div class="footerMenuTop">
+            <div class="fmtLeft">
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">About our products</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Beauty Club</a></li>
+              </ul>
+            </div>
+            <div class="fmtRight">
+              <a href="tel:02038136495">02 03 813 6495</a>
+              <div>
+                <span
+                  >You can&nbsp;<a href="#">e-mail</a>&nbsp;us or call us</span
+                >
+                <span>Mon - Fri: 8:55 AM - 6:05 PM</span>
+              </div>
+              <span><a href="#">Call Back</a></span>
+            </div>
+          </div>
+          <div class="footerMenuBottom">
+            <a href="#">MAKEUP™. BEAUTY WITHOUT LIMITS</a>
+            <span>&copy;&nbsp;makeup 2020-2023</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- end footer -->
+    <!-- scripts -->
+    <script src="./swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- end scripts -->
   </body>
 </html>

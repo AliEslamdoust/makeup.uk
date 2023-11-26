@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "jquery": "^3.7.1",
     "swiper": "^11.0.5"
-  }
+  },
+  "name": "makeup.uk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
