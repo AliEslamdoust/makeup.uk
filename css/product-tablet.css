@@ -1,0 +1,102 @@
+/* variables */
+:root {
+    --activeLink: #ff5252;
+    --hoverBtn: #5b24c9;
+    --primaryBtn: #212121;
+    --primaryBtnLightened: #212121E6;
+    --containerPadding: 96px;
+    --containerWidth: calc(100% - 96px);
+    --FixelText: FixelText, sans-serif;
+    --Jost: Jost, sans-serif;
+    --borderColor: #ebebeb;
+    --light: #fff;
+    --disActiveColor: #8f8f8f;
+    --secondaryBg: #FAFAFA;
+    --lightText: #a6a2a2;
+    --textColor: #9e9e9e;
+}
+
+@media (max-width:1024px) {
+
+    /* main body */
+    div.mSlidersContainer:hover~div.sliderZoom {
+        display: none !important;
+    }
+
+    div.breadCrumbs>ol {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+    }
+
+    div.mainProduct {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    div.mainProduct>div {
+        width: 100% !important;
+    }
+
+    /* re-arrange rating stars */
+    div.mRating {
+        flex-direction: row !important;
+        align-items: center;
+    }
+
+    /* changing product divs orders */
+
+    div.mPTitle {
+        order: 2;
+    }
+
+    div.mPImg {
+        order: 1;
+    }
+
+    div.mPPrice {
+        order: 3;
+    }
+
+    /* change main product title span position */
+    span.mTitle {
+        position: absolute;
+        z-index: 600;
+        left: 24px;
+        top: 50px;
+    }
+
+    /* hide special offers */
+    span.mSpecialOffer,
+    p.mSpecialOfferDetails {
+        display: none;
+    }
+
+    /* hide pagination images and set pagination spans */
+    div.mSliderPagination {
+        gap: 5px !important;
+    }
+
+    div.mSliderPagination>img {
+        display: none !important;
+    }
+
+    div.mSliderPagination>span {
+        width: 8px;
+        height: 8px;
+        background-color: var(--lightText);
+        display: block !important;
+        border-radius: 999px;
+    }
+
+    div.mSliderPagination>span.active {
+        background-color: var(--primaryBtn);
+        width: 12px;
+    }
+
+    /* hide navigation buttons */
+    div.mSliderNext,
+    div.mSliderPrev {
+        display: none !important;
+    }
+}

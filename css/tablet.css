@@ -149,6 +149,7 @@
         border-top: none !important;
         padding: 10px 10px 0 10px !important;
         flex-wrap: wrap;
+        align-items: flex-start !important;
     }
 
     ul.submenuTop>li {
@@ -271,5 +272,11 @@
         max-width: calc(100% - 55px) !important;
         text-align: left !important;
         font-size: 24px !important;
+    }
+
+    /* footer */
+
+    div.joinLetter>h2 {
+        font-size: 20px !important;
     }
 }
