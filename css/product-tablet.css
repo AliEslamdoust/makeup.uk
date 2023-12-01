@@ -99,4 +99,88 @@
     div.mSliderPrev {
         display: none !important;
     }
+
+    /* product description */
+    div.productDescription {
+        flex-direction: column;
+        padding: 50px 0 !important;
+        gap: 20px;
+        border: unset !important;
+    }
+
+    div.dLeft {
+        width: max-content !important;
+    }
+
+    div.dLeft>ul {
+        display: flex;
+        flex-direction: row !important;
+        border-right: unset !important;
+        border-bottom: 2px solid var(--lightText);
+        list-style: none;
+        position: relative;
+    }
+
+    div.dLeft>ul>span {
+        top: unset !important;
+        right: unset !important;
+        bottom: -2px;
+        left: 0;
+    }
+
+    div.dLeft>ul>li {
+        padding: 10px;
+        color: var(--lightText);
+        cursor: pointer;
+        font-weight: 400;
+    }
+
+    div.dLeft>ul>li.active {
+        color: var(--primaryBtn);
+        font-weight: 500;
+    }
+
+    div.dRight {
+        width: 100% !important;
+    }
+
+    div.dRight>ul {
+        flex-wrap: nowrap !important;
+    }
+
+    div.dRight>ul>li {
+        padding: 0 10px 50px !important;
+    }
+
+    table.dTable {
+        border: 1px solid var(--borderColor);
+    }
+
+    table.dTable>tbody>tr>th {
+        border-bottom: unset !important;
+    }
+
+    table.dTable>tbody>tr>td {
+        border-bottom: unset !important;
+    }
+
+    div.dText {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* comment section */
+    div.comment {
+        flex-direction: column;
+    }
+
+    div.commentLeft {
+        width: 100% !important;
+    }
+
+    div.commentRight {
+        width: 100% !important;
+    }
 }
