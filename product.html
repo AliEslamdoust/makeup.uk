@@ -1585,7 +1585,7 @@
           Reviews about Bielenda Professional Program Face Soothing Micellar
           Liquid
         </h2>
-        <button class="addComment">Leave your comment / Ask a question</button>
+        <button class="addComment toggleComment">Leave your comment / Ask a question</button>
       </div>
       <div class="commentBottom">
         <div class="comment">
@@ -1619,7 +1619,7 @@
               Garnier does not have such effects. It has a large volume, so now
               I have to suffer for a long time because it's a waste of money.
             </p>
-            <button class="reply">reply</button>
+            <button class="reply toggleComment">reply</button>
           </div>
         </div>
         <div class="comment">
@@ -1653,15 +1653,16 @@
               Garnier does not have such effects. It has a large volume, so now
               I have to suffer for a long time because it's a waste of money.
             </p>
-            <button class="reply">reply</button>
+            <button class="reply toggleComment">reply</button>
           </div>
         </div>
       </div>
     </div>
     <!-- end comment section -->
     <!-- leave a comment -->
-    <div class="addCommentContainer">
-      <button class="fa-solid fa-close"></button>
+    <div class="fallBack hide toggleComment" id="commentFallBack"></div>
+    <div class="addCommentContainer" id="addCommentContainer">
+      <button class="fa-solid fa-close toggleComment"></button>
       <h2>
         Soothing Micellar Makeup Remover - Bielenda Professional Program Face
         Soothing Micellar Liquid
@@ -1676,26 +1677,33 @@
           <span class="fa-solid fa-star"></span>
         </div>
       </div>
-      <form>
+      <form class="commentForm">
         <div class="commentInputsContainer">
           <div>
+            <input type="text"  required/>
             <label for="">Your name</label>
-            <input type="text" />
           </div>
           <div>
+            <input type="text"  required/>
             <label for="">E-mail</label>
-            <input type="text" />
           </div>
         </div>
         <div class="commentTitle">
           <p>You can leave a review or ask a question</p>
+          <span class="fa-solid fa-question-circle"></span>
+          <div>
+            <p>Use the following box in order to leave a review about the product or ask a question.</p>
+            <p>All comments not related to the product will be deleted!</p>
+            <p>The comment will be shown only after preliminary verification by our staff.</p>
+            <p>*Enter your email, and we will send you a notification immediately after the specialist answers your question.</p>
+          </div>
         </div>
-        <textarea name="" id="" placeholder="Message text"></textarea>
+        <textarea name="" id="" placeholder="Message text" required></textarea>
         <div class="commentPost">
-          <button>
+          <button class="commentUpload">
             <span class="fa-solid fa-upload"></span><span>Upload an image</span>
           </button>
-          <button>Comment</button>
+          <button class="commentPost">Comment</button>
         </div>
       </form>
     </div>

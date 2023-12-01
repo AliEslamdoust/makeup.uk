@@ -621,14 +621,223 @@ button.reply:hover {
 }
 
 /* add comment section */
+div.addCommentContainer.active {
+    height: 95vh;
+    max-height: 1000px;
+    min-height: 500px;
+    padding: 30px 0;
+}
+
 div.addCommentContainer {
+    transition: height .25s ease !important;
+    overflow: hidden;
+    height: 0;
     width: 70%;
     min-width: 300px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    align-items: center;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: var(--light);
+    z-index: 1100;
+    font-family: var(--Jost);
+}
+
+div.addCommentContainer>button.fa-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+}
+
+div.addCommentContainer>h2 {
+    font-size: 26px;
+    font-weight: 500;
+    max-width: 70%;
+    text-align: center;
+}
+
+div.commentRating {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+div.commentRating>h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+div.commentRatingStars {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+}
+
+div.commentRatingStars>span {
+    color: var(--lightText);
+}
+
+div.commentRatingStars>span.active {
+    color: var(--primaryBtn);
+}
+
+form.commentForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+div.commentInputsContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+div.commentInputsContainer>div {
+    position: relative;
+    border-bottom: 1px solid var(--borderColor);
+    width: 45%;
+}
+
+div.commentInputsContainer>div>input {
+    width: 100%;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+
+div.commentInputsContainer>div>input::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--hoverBtn);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+div.commentInputsContainer>div>input:focus~label,
+div.commentInputsContainer>div>input:valid~label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+    color: var(--primaryBtn);
+}
+
+div.commentInputsContainer>div>label {
+    font-size: 14px;
+    color: var(--lightText);
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    line-height: 1;
+    cursor: text;
+}
+
+div.commentTitle {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--primaryBtn);
+    gap: 10px;
+    position: relative;
+}
+
+div.commentTitle>span {
+    color: var(--hoverBtn);
+}
+
+div.commentTitle>span:hover~div {
+    display: flex;
+}
+
+div.commentTitle>div {
+    width: 120%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 20px);
+    background-color: var(--primaryBtn);
+    color: var(--light);
+    padding: 15px 10px;
+    font-size: 14px;
+}
+
+div.commentTitle>div::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: var(--primaryBtn);
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    right: 16.6%;
+    top: 0;
+}
+
+form.commentForm>textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--borderColor);
+    padding: 10px;
+    height: 100%;
+    resize: none;
+    outline: none;
+    font-family: var(--Jost);
+}
+
+div.commentPost {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+button.commentUpload {
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+    color: var(--hoverBtn);
+}
+
+button.commentPost {
+    padding: 1rem;
+    border: unset;
+    outline: unset;
+    color: var(--light);
+    background-color: var(--primaryBtn);
+    cursor: pointer;
+}
+
+button.commentPost:hover {
+    background-color: var(--primaryBtnLightened);
 }

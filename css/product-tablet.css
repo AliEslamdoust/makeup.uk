@@ -172,8 +172,13 @@
     }
 
     /* comment section */
+    div.commentBottom {
+        padding: 0 !important;
+    }
+
     div.comment {
         flex-direction: column;
+        padding: 30px 0 !important;
     }
 
     div.commentLeft {
@@ -182,5 +187,62 @@
 
     div.commentRight {
         width: 100% !important;
+    }
+
+    /* add comment section */
+    div.addCommentContainer.active {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 30px var(--containerPadding) !important;
+        overflow: auto;
+    }
+
+    div.addCommentContainer {
+        width: 100% !important;
+    }
+
+    div.addCommentContainer>h2 {
+        font-size: 20px !important;
+        text-align: left !important;
+        max-width: 100% !important;
+    }
+
+    div.commentRating>h3 {
+        align-self: flex-start;
+    }
+
+    div.commentRatingStars {
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 0 !important;
+        font-size: 18px !important;
+    }
+
+    form.commentForm {
+        width: 100% !important;
+    }
+
+    div.commentInputsContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    div.commentInputsContainer>div {
+        width: 100% !important;
+    }
+
+    div.commentTitle {
+        display: none !important;
+    }
+
+    div.commentPost {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 40px;
+    }
+
+    button.commentPost {
+        width: 100%;
     }
 }

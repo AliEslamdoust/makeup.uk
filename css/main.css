@@ -73,10 +73,13 @@ div.fallBack {
     background-color: #00000080;
     left: 0;
     top: 0;
+    opacity: 1;
+    transition: opacity 0.25s ease !important;
 }
 
 div.fallBack.hide {
-    display: none;
+    height: 0;
+    opacity: 0;
 }
 
 /* header starts */
@@ -263,7 +266,6 @@ div.searchContainer.hide {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    display: flex;
     align-items: center;
     z-index: 1;
     flex-grow: 1;
@@ -317,16 +319,18 @@ div.login-cart>i {
 }
 
 div.loginContainer {
-    display: none;
+    display: flex;
+    height: 0;
     overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .25s ease, height .25s ease !important;
 }
 
 div.loginContainer.show {
-    position: absolute;
     z-index: 901;
     top: 100%;
     right: 50px;
-    display: flex;
     align-items: center;
     flex-direction: column;
     padding: 20px 50px;
@@ -336,6 +340,8 @@ div.loginContainer.show {
     background-color: var(--light);
     min-width: 325px;
     max-width: 80vw;
+    height: max-content;
+    opacity: 1;
 }
 
 div.loginContainer.show>form {
@@ -401,6 +407,7 @@ div.loginContainer.show>form>div>label {
     left: 0;
     bottom: 8px;
     font-size: 14px;
+    transition: all .25s ease !important;
 }
 
 div.loginContainer.show>form>div>label.focused {

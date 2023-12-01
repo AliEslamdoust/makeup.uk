@@ -136,19 +136,30 @@ else {
   let mobileMenu = document.getElementById("mobileMenu");
 
   mobileMenu.addEventListener("click", function () {
-    this.classList.toggle("active");
-    headerBottom.classList.toggle("active");
+    menuBtn.forEach((element, i) => {
+      if (this.classList.contains("active")) {
+        subMenu[i].classList.remove("active");
+        menuChevron[i].classList.remove("active");
+      }
+
+      this.classList.toggle("active");
+      headerBottom.classList.toggle("active");
+    });
   });
 
   menuBtn.forEach((elem, index) => {
     elem.addEventListener("click", function () {
+      menuBtn.forEach((element, i) => {
+        if (i != index) {
+          subMenu[i].classList.remove("active");
+          menuChevron[i].classList.remove("active");
+        }
+      });
       subMenu[index].classList.toggle("active");
       menuChevron[index].classList.toggle("active");
     });
   });
 }
-
-
 
 // fill likes heart after mouse over
 let likes = document.querySelectorAll(".like");

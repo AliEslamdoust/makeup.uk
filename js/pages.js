@@ -305,7 +305,7 @@ function fixAfterResize() {
   movedSlider();
 }
 
-fixAfterResize()
+fixAfterResize();
 
 // relted items slider
 var swiper = new Swiper(`.dmySwiper`, {
@@ -326,4 +326,31 @@ var swiper = new Swiper(`.dmySwiper`, {
     },
   },
   keyboard: true,
+});
+
+// post comment
+let commentBtn = document.querySelectorAll(".toggleComment");
+let commentFallBack = document.getElementById("commentFallBack");
+let commentContainer = document.getElementById("addCommentContainer");
+
+commentBtn.forEach((elem, index) => {
+  elem.addEventListener("click", function () {
+    commentFallBack.classList.toggle("hide");
+    commentContainer.classList.toggle("active");
+  });
+});
+
+// comment rating btns
+let commentStars = document.querySelectorAll(".commentRatingStars>span");
+
+commentStars.forEach((elem, index) => {
+  elem.addEventListener("click", function () {
+    for (let i = 0; i < commentStars.length; i++) {
+      if (i <= index) {
+        commentStars[i].classList.add("active");
+      } else {
+        commentStars[i].classList.remove("active");
+      }
+    }
+  });
 });

@@ -7,7 +7,10 @@
         padding: 0 !important;
     }
 
-    div.headerTop,
+    div.headerTop {
+        padding: 10px var(--containerPadding) !important;
+    }
+
     div.headerBottom {
         padding: 0 var(--containerPadding) !important;
     }
@@ -93,7 +96,7 @@
     }
 
     div.headerBottom.active {
-        height: calc(100vh - 126px) !important;
+        height: calc(100vh - 100px) !important;
     }
 
     ul.hB-Menu {
@@ -135,20 +138,22 @@
         width: 100% !important;
         animation: unset !important;
         box-shadow: none !important;
-        height: 0 !important;
+        height: max-content !important;
+        max-height: 0;
         overflow: hidden;
         padding: 0 !important;
+        opacity: 1 !important;
     }
 
     div.submenu.active {
-        height: max-content !important;
+        max-height: 2000px !important;
         padding: 0 !important;
     }
 
     ul.submenuTop {
         border-top: none !important;
         padding: 10px 10px 0 10px !important;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: flex-start !important;
     }
 
