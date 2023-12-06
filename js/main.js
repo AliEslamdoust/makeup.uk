@@ -182,3 +182,11 @@ specialOfferTiming.forEach((elem, index) => {
     elem.innerHTML = timeHour + ":" + timeMin + ":" + timeSec;
   }
 });
+
+// change products link
+let pImgLink = document.querySelectorAll("a.pSliderTop");
+let pBodyLink = document.querySelectorAll(".pSliderHeading>a");
+pImgLink.forEach((elem, index) => {
+  elem.href = "./product/";
+  pBodyLink[index].href = "./product/";
+});

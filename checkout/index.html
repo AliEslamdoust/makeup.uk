@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="height=device-height, 
+      width=device-width, initial-scale=1.0, 
+      minimum-scale=1.0, maximum-scale=1.0, 
+      user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <title>
+      Cosmetics & Beauty products, Fragrances at Makeup.uk online store
+    </title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../FontAwesome/css/all.css" />
+    <link
+      rel="shortcut icon"
+      href="../media/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="cHeaderContainer">
+      <nav>
+        <div class="cHeaderBackBtn">
+          <a href="../">
+            <span class="fa-solid fa-arrow-left cMobileBack"></span>
+            <span class="fa-light fa-chevron-left cDesktopBack"></span>
+            <span class="cDesktopBack">Continue Shopping</span>
+          </a>
+        </div>
+        <div class="cHeaderLogo">
+          <a href="../">
+            <img src="../media/logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="cHeaderTel">
+          <a href="tel:02038136495">02 03 813 6495</a>
+          <span>Mon - Fri: 8:55 AM - 6:05 PM</span>
+        </div>
+      </nav>
+    </div>
+    <!-- end header -->
+    <!-- start body -->
+    <div class="cBodyContainer">
+      <div class="cCheckout">
+        <h2>Checkout</h2>
+        <div class="checkoutTabs">
+          <button class="headerTab">New customer</button>
+          <button class="headerTab">Log in</button>
+          <span id="headerTabBar"></span>
+        </div>
+        <div class="checkoutTitle">
+          <h3 class="cheaderTitle">1 Personal info</h3>
+          <h3 class="cheaderTitle">2 Information about delivery</h3>
+        </div>
+        <div class="formContainer">
+          <form class="newCheckoutForm" id="newCustomerForm">
+            <div class="personalInfo">
+              <div class="cInput">
+                <input type="text" name="" id="" required />
+                <label for="">Your first name*</label>
+                <span></span>
+              </div>
+              <div class="cInput">
+                <input type="text" name="" id="" required />
+                <label for="">Your last name*</label>
+                <span></span>
+              </div>
+              <div class="cInput">
+                <input type="text" name="" id="" required />
+                <label for="">Phone*</label>
+                <span></span>
+              </div>
+              <div class="cInput">
+                <input type="text" name="" id="" required />
+                <label for="">Email*</label>
+                <span></span>
+              </div>
+              <div class="cCheckboxContainer">
+                <input type="checkbox" name="cNotifyMe" id="cNotifyMe" />
+                <label for="cNotifyMe">
+                  Sign in to receive notifications about new arrivals, sales,
+                  special offers
+                </label>
+              </div>
+              <div class="cNextContainer">
+                <button class="cNext" id="cNext">Next</button>
+              </div>
+            </div>
+            <div class="deliveryInfo">
+              <div class="cDeliveryInputContainer">
+                <label for="">City/Town*</label>
+                <div class="cDeliveryInput">
+                  <button class="fa-light fa-search"></button>
+                  <input type="text" />
+                  <button class="fa-light fa-x"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <form class="loginCheckoutForm">
+          <p>
+            If you are a signed-up customer, enter your username/email and
+            password. If you are not yet our customer, go to 'New customer' and
+            fill in the information.
+          </p>
+          <div class="enterPass">
+            <div class="cLoginInput">
+              <input type="text" name="" id="" />
+              <label for="">E-mail</label>
+            </div>
+            <div class="cLoginInput">
+              <input type="text" name="" id="" />
+              <label for="">Password</label>
+            </div>
+          </div>
+          <div class="forgotPass">
+            <div class="cLoginInput">
+              <input type="text" name="" id="" />
+              <label for="">E-mail</label>
+            </div>
+          </div>
+          <div class="cLoginContainer">
+            <button class="cForgotPass">Forgot your password?</button>
+            <button class="cLogin">Log in</button>
+          </div>
+        </form>
+      </div>
+      <div class="cTotalContainer">
+        <div class="orderHeader">
+          <h3>Your order</h3>
+          <div><span>$</span><span class="orderPrice"></span></div>
+        </div>
+        <div class="orderItemContainer">
+          <div class="orderItem">
+            <a href="../product/" class="orderImg">
+              <img src="../media/product0.jpg" alt="" />
+            </a>
+            <div class="orderDetails">
+              <a href="../product/">
+                <h4>
+                  Bielenda Professional Program Face Soothing Micellar Liquid
+                </h4>
+                <span>Soothing Micellar Makeup Remover 500mL</span>
+              </a>
+              <div class="orderPriceContainer orderPrice">
+                <span>$</span>
+                <span class="orderPrice"></span>
+              </div>
+              <div class="orderCount">
+                <div class="orderItemCount">
+                  <div class="orderDecrease"><span></span></div>
+                  <span id="orderCount"></span>
+                  <div class="orderIncrease"><span></span><span></span></div>
+                </div>
+                <button id="delOrder" class="fa-light fa-trash-can"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grandTotalContainer">
+          <button>Choose gift wrapping</button>
+          <div class="totalPriceContainer">
+            <span>Subtotal</span>
+            <div class="totalPrice">
+              <span>$</span>
+              <span class="orderPrice"></span>
+            </div>
+          </div>
+          <div class="totalPriceContainer">
+            <span>Shipping</span>
+            <div class="totalPrice">
+              <span>$</span>
+              <span id="shippingPrice"></span>
+            </div>
+          </div>
+          <div class="grandTotal">
+            <h3>Grand Total</h3>
+            <div>
+              <span>$</span>
+              <span id="grandTotal"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end body -->
+    <!-- scripts -->
+    <script src="../js/checkout.js"></script>
+    <!-- end scripts -->
+  </body>
+</html>

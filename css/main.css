@@ -214,10 +214,15 @@ ul.hB-Menu>li {
     padding: 8px 0;
     flex-grow: 1;
     height: 100%;
+    text-align: center;
 }
 
 ul.hB-Menu>li:nth-last-child(1) {
-    flex-grow: 0;
+    text-align: right;
+}
+
+ul.hB-Menu>li:nth-child(1) {
+    text-align: left;
 }
 
 ul.hB-Menu>li>a {
@@ -480,6 +485,7 @@ ul.hB-Menu>li:hover>div.submenu {
 }
 
 div.submenu {
+    transition: opacity .25s ease-in-out;
     position: absolute;
     z-index: 900;
     left: 0;
@@ -687,12 +693,12 @@ div.sliderPagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 div.sliderPagination>span {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background-color: var(--light);
     border: 1px solid var(--primaryBtn);
     border-radius: 100px;
@@ -705,7 +711,7 @@ div.sliderPagination>span:hover {
 }
 
 div.sliderPagination>span.active {
-    width: 20px;
+    width: 12px;
     background-color: var(--primaryBtn);
     border-color: var(--light);
 }
@@ -1194,7 +1200,7 @@ div.joinLetter>form {
 
 div.joinLetter>form>input {
     flex-grow: 1;
-    padding: .5rem;
+    padding: .5rem .5rem .5rem 0;
     font-size: 14px;
     background-color: transparent;
     outline: none;
@@ -1209,7 +1215,7 @@ div.joinLetter>form>input:focus+label {
 
 div.joinLetter>form>label {
     position: absolute;
-    left: .5rem;
+    left: 0;
     top: .5rem;
     line-height: 1;
     font-size: 14px;

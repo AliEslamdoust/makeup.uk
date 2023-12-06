@@ -1,0 +1,45 @@
+/* variables */
+:root {
+    --activeLink: #ff5252;
+    --hoverBtn: #5b24c9;
+    --primaryBtn: #212121;
+    --primaryBtnLightened: #212121E6;
+    --containerPadding: 96px;
+    --containerWidth: calc(100% - 96px);
+    --FixelText: FixelText, sans-serif;
+    --Jost: Jost, sans-serif;
+    --borderColor: #ebebeb;
+    --light: #fff;
+    --disActiveColor: #8f8f8f;
+    --secondaryBg: #FAFAFA;
+    --lightText: #a6a2a2;
+    --textColor: #9e9e9e;
+    --agreeColor: #4BC800;
+}
+
+@media (max-width:1024px) {
+
+    /* header */
+    div.cHeaderContainer {
+        padding-top: 15px !important;
+    }
+
+    span.cMobileBack {
+        display: block !important;
+        color: var(--primaryBtn);
+        font-size: 20px;
+    }
+
+    span.cDesktopBack {
+        display: none;
+    }
+
+    div.cHeaderLogo {
+        height: 36divpx !important;
+    }
+
+    div.cHeaderTel {
+        display: none !important;
+    }
+
+}

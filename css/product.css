@@ -42,7 +42,11 @@ div.breadCrumbs>ol>li {
 
 div.breadCrumbs>ol>li>a {
     text-decoration: none;
-    color: var(--hoverBtn);
+    color: var(--lightText);
+}
+
+div.breadCrumbs>ol>li>a:hover {
+    color: var(--primaryBtn);
 }
 
 div.breadCrumbs>ol>li>span {
@@ -213,6 +217,7 @@ div.sliderZoom {
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
+    transition: none !important;
 }
 
 div.mSlidersContainer:hover~div.sliderZoom {
@@ -403,19 +408,33 @@ div.dRight {
 }
 
 div.dRight>ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
     align-items: stretch;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     list-style: none;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 div.dRight>ul>li {
+    grid-column: 1;
+    grid-row: 1;
     width: 100%;
     height: max-content;
     padding: 0 30px 50px 10px;
+    transform: translate(0);
+}
+
+div.dRight>ul>li.hideY {
+    transform: translateY(-100%);
+}
+
+div.dRight>ul>li.hideX {
+    transform: translateX(-100%);
 }
 
 table.dTable {
@@ -653,7 +672,7 @@ div.addCommentContainer>button.fa-close {
     position: absolute;
     right: 20px;
     top: 20px;
-    font-size: 20px;
+    font-size: 24px;
     background-color: transparent;
     border: unset;
     outline: unset;
@@ -840,4 +859,256 @@ button.commentPost {
 
 button.commentPost:hover {
     background-color: var(--primaryBtnLightened);
+}
+
+/* shopping cart */
+div.cartContainer.active {
+    padding: 25px calc(var(--containerPadding) / 2);
+    height: max-content;
+    max-height: 95vh;
+    min-height: 50vh;
+    overflow: auto;
+}
+
+div.cartContainer {
+    transition: opacity .25s ease;
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light);
+    font-family: var(--Jost);
+    z-index: 1100;
+}
+
+div.cartTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--borderColor);
+    padding-bottom: 20px;
+}
+
+div.cartTop>h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+div.cartTop>button {
+    font-size: 24px;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+}
+
+div.cartBottom {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+div.cartLeft {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.cartItem {
+    border-bottom: 1px solid var(--borderColor);
+    width: 100%;
+}
+
+div.cartItemContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+div.cartItemTitle {
+    width: max-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+div.cartItemTitle>a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: unset;
+}
+
+div.cartItemTitle>a>img {
+    height: 96px;
+    margin-right: 32px;
+    object-fit: contain;
+}
+
+div.cartItemDetails {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+a.cartItemText {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: unset;
+}
+
+a.cartItemText>h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primaryBtn);
+    padding-right: 15px;
+}
+
+a.cartItemText>span {
+    font-size: 14px;
+    color: var(--lightText);
+    padding-right: 15px;
+}
+
+
+div.cartItemCount {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+div.cartItemCount>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 32px;
+    line-height: 1;
+    font-size: 18px;
+    color: var(--primaryBtn);
+}
+
+div.cartItemMinus,
+div.cartItemPlus {
+    border: 1px solid var(--primaryBtn);
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.cartItemMinus>span,
+div.cartItemPlus>span {
+    width: 18px;
+    height: 1px;
+    background-color: var(--primaryBtn);
+}
+
+div.cartItemPlus>span:nth-child(1) {
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+div.cartItemPrice-Delete {
+    gap: 40px;
+    display: flex;
+    align-items: flex-start;
+    color: var(--primaryBtn);
+}
+
+div.cartItemPrice {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+}
+
+div.cartItemPrice-Delete>button {
+    background-color: transparent;
+    border: unset;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+div.remItem,
+div.delItem,
+div.addItem {
+    display: none;
+}
+
+div.cartRight {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--secondaryBg);
+}
+
+div.cartOrderPrice {
+    font-size: 16px;
+    color: var(--primaryBtn);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primaryBtn);
+    font-weight: 100;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+div.cartTotalPrice {
+    padding: 20px 0 30px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a.checkout {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--primaryBtn);
+    color: var(--light);
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+div.freeDelivery.hide {
+    display: none;
+}
+
+div.freeDelivery {
+    font-size: 14px;
+    color: var(--hoverBtn);
+    max-width: 80%;
+    margin: 0 auto;
 }

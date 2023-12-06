@@ -1,0 +1,329 @@
+/* import tablet size */
+@import url(./checkout-tablet.css);
+
+/* variables */
+:root {
+    --activeLink: #ff5252;
+    --hoverBtn: #5b24c9;
+    --primaryBtn: #212121;
+    --primaryBtnLightened: #212121E6;
+    --containerPadding: 96px;
+    --containerWidth: calc(100% - 96px);
+    --FixelText: FixelText, sans-serif;
+    --Jost: Jost, sans-serif;
+    --borderColor: #ebebeb;
+    --light: #fff;
+    --disActiveColor: #8f8f8f;
+    --secondaryBg: #FAFAFA;
+    --lightText: #a6a2a2;
+    --textColor: #9e9e9e;
+    --agreeColor: #4BC800;
+}
+
+/* header */
+div.cHeaderContainer {
+    width: 100%;
+    padding: 30px var(--containerPadding);
+    padding-bottom: 0px;
+    font-family: var(--Jost);
+}
+
+div.cHeaderContainer>nav {
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--borderColor);
+    display: grid;
+    height: 83px;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+div.cHeaderBackBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    grid-column: 1;
+    justify-content: flex-start;
+}
+
+div.cHeaderBackBtn>a {
+    text-decoration: none;
+    color: var(--lightText);
+}
+
+div.cHeaderBackBtn>a:hover {
+    color: var(--hoverBtn);
+}
+
+div span.cMobileBack {
+    display: none;
+}
+
+div.cHeaderLogo {
+    display: flex;
+    height: 52px;
+    grid-column: 2/4;
+    justify-content: center;
+}
+
+div.cHeaderLogo>a {
+    height: 100%;
+    width: auto;
+    text-decoration: none;
+}
+
+div.cHeaderLogo>a>img {
+    height: 100%;
+    width: auto;
+}
+
+div.cHeaderTel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 4/-1;
+    gap: 10px;
+}
+
+div.cHeaderTel>a {
+    text-decoration: none;
+    color: var(--primaryBtn);
+    font-weight: 600;
+}
+
+div.cHeaderTel>a:hover {
+    color: var(--hoverBtn);
+}
+
+div.cHeaderTel>span {
+    font-size: 12px;
+    color: var(--lightText);
+}
+
+/* body */
+/* customers information */
+div.cBodyContainer {
+    padding: 30px var(--containerPadding);
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--Jost);
+}
+
+div.cCheckout {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+div.cCheckout>h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+div.checkoutTabs {
+    display: flex;
+    width: max-content;
+    position: relative;
+    gap: 2rem;
+    border-bottom: 2px solid var(--borderColor);
+}
+
+div.checkoutTabs>span {
+    width: 50%;
+    height: 2px;
+    background-color: var(--primaryBtn);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+button.headerTab {
+    width: max-content;
+    background-color: transparent;
+    border: unset;
+    outline: unset;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--lightText);
+}
+
+button.headerTab.active {
+    color: var(--primaryBtn);
+}
+
+div.checkoutTitle {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+h3.cheaderTitle {
+    color: var(--lightText);
+    font-size: 20px;
+    word-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+h3.cheaderTitle.active {
+    color: var(--hoverBtn);
+}
+
+div.formContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+form.newCheckoutForm {
+    width: 200%;
+    display: flex;
+}
+
+div.personalInfo {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+div.cInput {
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    width: 45%;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+div.cInput>input {
+    width: 100%;
+    background-color: transparent;
+    outline: unset;
+    border: unset;
+    padding: .5rem 0;
+}
+
+div.cInput>input:valid~label,
+div.cInput>input:focus~label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+    color: var(--primaryBtn);
+}
+
+div.cInput>label {
+    position: absolute;
+    line-height: 1;
+    top: .5rem;
+    left: 0;
+    font-size: 14px;
+    color: var(--lightText);
+}
+
+div.cInput>input:focus~span {
+    width: 100%;
+}
+
+div.cInput>input:valid~span {
+    width: 100%;
+    background-color: var(--agreeColor);
+}
+
+div.cInput>span {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--hoverBtn);
+    width: 0;
+    height: 1px;
+}
+
+div.cCheckboxContainer {
+    width: 45%;
+    margin-left: auto;
+    margin-top: .5rem;
+    color: var(--primaryBtn);
+    padding-right: 20px;
+    margin-bottom: 30px;
+    gap: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+div.cCheckboxContainer>label {
+    font-size: 12px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+div.cNextContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.cNext {
+    width: 25%;
+    padding: 1rem 0;
+    background-color: var(--primaryBtn);
+    color: var(--light);
+    border: unset;
+    outline: unset;
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div.deliveryInfo {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.cDeliveryInputContainer {
+    width: 40%;
+    height: max-content;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.cDeliveryInputContainer>label {
+    font-size: 14px;
+    color: var(--lightText);
+}
+
+div.cDeliveryInput {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+div.cDeliveryInput>input {
+    background-color: transparent;
+    outline: unset;
+    border: unset;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+div.cDeliveryInput>button {
+    background-color: unset;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+}
+
+
+
+div.cTotalContainer {
+    width: calc(40% - 56px);
+    margin-left: 56px;
+}
