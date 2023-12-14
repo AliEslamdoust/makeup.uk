@@ -42,4 +42,124 @@
         display: none !important;
     }
 
+    /* checkout */
+    div.cBodyContainer {
+        flex-direction: column;
+    }
+
+    div.cCheckout {
+        order: 2;
+        width: 100% !important;
+    }
+
+    div.cCheckout>h2 {
+        display: none;
+    }
+
+    div.checkoutTabs {
+        gap: 0 !important;
+        border-bottom: unset !important;
+        width: 100% !important;
+        background-color: var(--borderColor);
+        border-radius: 5px;
+    }
+
+    div.checkoutTabs>span {
+        height: calc(100% - 10px) !important;
+        background-color: var(--hoverBtn) !important;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        z-index: 5;
+    }
+
+    button.headerTab {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50% !important;
+        color: var(--primaryBtn) !important;
+    }
+
+    button.headerTab.active {
+        color: var(--light) !important;
+    }
+
+    div.checkoutTitle {
+        flex-direction: column;
+    }
+
+    h3.cheaderTitle {
+        font-size: 18px !important;
+        word-spacing: nowrap;
+    }
+
+    div.cInput {
+        width: 100% !important;
+    }
+
+    div.cCheckboxContainer {
+        width: 100% !important;
+    }
+
+    div.cNext {
+        padding: 1rem 0 !important;
+        width: 100% !important;
+    }
+
+    div.login-ForgotPass {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+
+    form.loginCheckoutForm {
+        padding: 0 !important;
+    }
+
+    form.loginCheckoutForm>p {
+        width: 100% !important;
+        margin-bottom: 30px !important;
+    }
+
+    div.cLoginContainer {
+        flex-direction: column;
+        margin: 30px 0 !important;
+        gap: 30px !important;
+    }
+
+    div.cLoginContainer>* {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.cDeliveryInputContainer {
+        width: 100% !important;
+    }
+
+    div.cTotalContainer {
+        order: 1;
+        width: 100% !important;
+        margin: 30px 0 !important;
+        padding: 0 !important;
+        border: unset !important;
+    }
+
+    div.orderHeader {
+        border: unset !important;
+    }
+
+    div.orderItem {
+        border: unset !important;
+    }
+
+    div.grandTotalContainer {
+        border-bottom: 1px solid var(--borderColor);
+        border-top: 1px solid var(--borderColor);
+    }
 }

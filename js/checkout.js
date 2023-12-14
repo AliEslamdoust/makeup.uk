@@ -72,10 +72,10 @@ tabBtns.forEach((elem, index) => {
 function activeTab(element, index) {
   tabBtns.forEach((elem) => elem.classList.remove("active"));
   element.classList.add("active");
-  tabBorder.style.width = element.getBoundingClientRect().width + "px";
+  tabBorder.style.width = element.getBoundingClientRect().width - 10 + "px";
   tabBorder.style.left =
     element.getBoundingClientRect().left -
-    tabBtns[0].getBoundingClientRect().left +
+    tabBtns[0].getBoundingClientRect().left + 5 +
     "px";
   formsContainer.style.transform = `translateX(-${66 * index}%)`;
   if (index == 1) {

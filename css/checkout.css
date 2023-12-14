@@ -1,4 +1,5 @@
 /* import tablet size */
+@import url(./checkout-laptop.css);
 @import url(./checkout-tablet.css);
 
 /* variables */
@@ -107,6 +108,7 @@ div.cBodyContainer {
     padding: 30px var(--containerPadding);
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     font-family: var(--Jost);
 }
 
@@ -197,6 +199,7 @@ div.personalInfo {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
+    padding-right: 10px;
 }
 
 div.cInput {
@@ -280,8 +283,8 @@ div.cNext {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    padding: 1rem 0;
+    width: max-content;
+    padding: 1rem 5rem;
     background-color: var(--primaryBtn);
     color: var(--light);
     border: unset;
@@ -336,6 +339,8 @@ div.cDeliveryInput>button {
 form.loginCheckoutForm {
     width: calc(100% / 3);
     padding-right: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 form.loginCheckoutForm>p {
@@ -508,7 +513,7 @@ div.orderCount {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 div.orderItemCount {

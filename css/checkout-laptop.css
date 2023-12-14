@@ -1,0 +1,13 @@
+@media (max-width:1440px) {
+    div.cCheckout {
+        width: 70% !important;
+    }
+
+    div.cTotalContainer {
+        width: 30% !important;
+    }
+
+    div.cNext {
+        padding: .5rem 2.5rem !important;
+    }
+}
