@@ -134,11 +134,9 @@ var swiper = new Swiper(`.rSwiper`, {
 });
 
 // special offers timing
-let specialTimes = [
-  120, 24, 56, 93, 24, 90, 24, 24, 48, 24, 72, 48, 124, 100, 98, 48,
-];
-let specialMin = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let specialSec = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let specialTimes = [120, 24, 56, 93, 24, 90, 24, 24];
+let specialMin = [0, 0, 0, 0, 0, 0, 0, 0];
+let specialSec = [0, 0, 0, 0, 0, 0, 0, 0];
 let specialOfferTiming = document.querySelectorAll(".specialOfferTime");
 specialOfferTiming.forEach((elem, index) => {
   callSpecialOffer();

@@ -962,11 +962,10 @@ div.pSlider:hover div.pSliderButtons {
     height: 100%;
 }
 
-
 /* product Ads */
 div.adsContainer {
     width: 100%;
-    padding: var(--containerPadding);
+    padding: 10px var(--containerPadding);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,5 +1,5 @@
 @media (max-width:1440px) {
     :root {
-        --containerPadding: 48px;
+        --containerPadding: 48px !important;
     }
 }

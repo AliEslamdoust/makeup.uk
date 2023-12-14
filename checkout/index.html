@@ -54,30 +54,54 @@
           <button class="headerTab">Log in</button>
           <span id="headerTabBar"></span>
         </div>
-        <div class="checkoutTitle">
+        <div class="checkoutTitle" id="checkoutTitle">
           <h3 class="cheaderTitle">1 Personal info</h3>
           <h3 class="cheaderTitle">2 Information about delivery</h3>
         </div>
-        <div class="formContainer">
+        <div class="formContainer" id="formsContainer">
           <form class="newCheckoutForm" id="newCustomerForm">
             <div class="personalInfo">
               <div class="cInput">
-                <input type="text" name="" id="" required />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                  class="newCustomerInput"
+                />
                 <label for="">Your first name*</label>
                 <span></span>
               </div>
               <div class="cInput">
-                <input type="text" name="" id="" required />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                  class="newCustomerInput"
+                />
                 <label for="">Your last name*</label>
                 <span></span>
               </div>
               <div class="cInput">
-                <input type="text" name="" id="" required />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                  class="newCustomerInput"
+                />
                 <label for="">Phone*</label>
                 <span></span>
               </div>
               <div class="cInput">
-                <input type="text" name="" id="" required />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                  class="newCustomerInput"
+                />
                 <label for="">Email*</label>
                 <span></span>
               </div>
@@ -89,53 +113,75 @@
                 </label>
               </div>
               <div class="cNextContainer">
-                <button class="cNext" id="cNext">Next</button>
+                <div class="cNext" id="cNext">Next</div>
               </div>
             </div>
             <div class="deliveryInfo">
               <div class="cDeliveryInputContainer">
                 <label for="">City/Town*</label>
                 <div class="cDeliveryInput">
-                  <button class="fa-light fa-search"></button>
+                  <button type="button" class="fa-light fa-search"></button>
                   <input type="text" />
-                  <button class="fa-light fa-x"></button>
+                  <button type="button" class="fa-light fa-x"></button>
                 </div>
               </div>
             </div>
           </form>
+          <form class="loginCheckoutForm">
+            <p>
+              If you are a signed-up customer, enter your username/email and
+              password. If you are not yet our customer, go to 'New customer'
+              and fill in the information.
+            </p>
+            <div class="enterPass login-ForgotPass">
+              <div class="cInput cLoginInput">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                />
+                <label for="">E-mail</label>
+                <span></span>
+              </div>
+              <div class="cInput cLoginInput">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                />
+                <label for="">Password</label>
+                <span></span>
+              </div>
+              <div class="cLoginContainer">
+                <div class="cForgotPass">Forgot your password?</div>
+                <button class="cLogin">Log in</button>
+              </div>
+            </div>
+            <div class="forgotPass login-ForgotPass">
+              <div class="cInput cLoginInput">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  required
+                />
+                <label for="">E-mail</label>
+                <span></span>
+              </div>
+              <div class="cLoginContainer cForgotContainer">
+                <div class="cForgotPass">Remembered?</div>
+                <button class="cLogin">Remind me</button>
+              </div>
+            </div>
+          </form>
         </div>
-        <form class="loginCheckoutForm">
-          <p>
-            If you are a signed-up customer, enter your username/email and
-            password. If you are not yet our customer, go to 'New customer' and
-            fill in the information.
-          </p>
-          <div class="enterPass">
-            <div class="cLoginInput">
-              <input type="text" name="" id="" />
-              <label for="">E-mail</label>
-            </div>
-            <div class="cLoginInput">
-              <input type="text" name="" id="" />
-              <label for="">Password</label>
-            </div>
-          </div>
-          <div class="forgotPass">
-            <div class="cLoginInput">
-              <input type="text" name="" id="" />
-              <label for="">E-mail</label>
-            </div>
-          </div>
-          <div class="cLoginContainer">
-            <button class="cForgotPass">Forgot your password?</button>
-            <button class="cLogin">Log in</button>
-          </div>
-        </form>
       </div>
       <div class="cTotalContainer">
         <div class="orderHeader">
           <h3>Your order</h3>
-          <div><span>$</span><span class="orderPrice"></span></div>
+          <div><span>$</span>&nbsp;<span class="orderPrice"></span></div>
         </div>
         <div class="orderItemContainer">
           <div class="orderItem">
@@ -149,7 +195,7 @@
                 </h4>
                 <span>Soothing Micellar Makeup Remover 500mL</span>
               </a>
-              <div class="orderPriceContainer orderPrice">
+              <div class="orderPriceContainer">
                 <span>$</span>
                 <span class="orderPrice"></span>
               </div>
@@ -159,7 +205,7 @@
                   <span id="orderCount"></span>
                   <div class="orderIncrease"><span></span><span></span></div>
                 </div>
-                <button id="delOrder" class="fa-light fa-trash-can"></button>
+                <a href="../product/" class="fa-light fa-trash-can"></a>
               </div>
             </div>
           </div>
