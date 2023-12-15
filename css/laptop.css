@@ -2,4 +2,8 @@
     :root {
         --containerPadding: 48px !important;
     }
+
+    div.pSliderHeader>h3 {
+        font-size: 24px !important;
+    }
 }

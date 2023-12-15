@@ -75,91 +75,98 @@ let ssMenuActivators = document.querySelectorAll(".ssMenuActive");
 let ssMenu = document.querySelectorAll(".ssMenu");
 let ssMenuHeight;
 let currentssMenu;
-if (window.innerWidth > 1024) {
-  ssMenuActivators.forEach((elem, index) => {
-    elem.addEventListener("click", function () {
-      ssMenu[index].classList.toggle("isActive");
-      let liItemsCount = ssMenu[index].childElementCount;
-      ssMenuHeight = liItemsCount * 28;
-      currentssMenu = index;
 
-      if (ssMenu[index].classList.contains("isActive")) {
-        currentHeight = 0;
-      } else {
-        currentHeight = ssMenu[index].getBoundingClientRect().height / 10;
-      }
+window.addEventListener("resize", fixMenuErrors);
 
-      callSMenu();
+function fixMenuErrors() {
+  if (window.innerWidth > 1024) {
+    ssMenuActivators.forEach((elem, index) => {
+      elem.addEventListener("click", function () {
+        ssMenu[index].classList.toggle("isActive");
+        let liItemsCount = ssMenu[index].childElementCount;
+        ssMenuHeight = liItemsCount * 28;
+        currentssMenu = index;
 
-      if (ssMenuActivators[index].classList.contains("active")) {
-        ssMenuActivators[index].classList.remove("active");
-      } else {
-        ssMenuActivators[index].classList.add("active");
-      }
+        if (ssMenu[index].classList.contains("isActive")) {
+          currentHeight = 0;
+        } else {
+          currentHeight = ssMenu[index].getBoundingClientRect().height / 10;
+        }
+
+        callSMenu();
+
+        if (ssMenuActivators[index].classList.contains("active")) {
+          ssMenuActivators[index].classList.remove("active");
+        } else {
+          ssMenuActivators[index].classList.add("active");
+        }
+      });
     });
-  });
 
-  function callSMenu() {
-    openSSMenu(ssMenuHeight, currentssMenu);
-  }
+    function callSMenu() {
+      openSSMenu(ssMenuHeight, currentssMenu);
+    }
 
-  let currentHeight = 0;
-  function openSSMenu(height, index) {
-    if (ssMenu[index].classList.contains("isActive")) {
-      if (currentHeight * 10 < height) {
-        ssMenu[index].style.height = currentHeight * 10 + "px";
-        currentHeight++;
-        setTimeout(callSMenu, 10);
+    let currentHeight = 0;
+    function openSSMenu(height, index) {
+      if (ssMenu[index].classList.contains("isActive")) {
+        if (currentHeight * 10 < height) {
+          ssMenu[index].style.height = currentHeight * 10 + "px";
+          currentHeight++;
+          setTimeout(callSMenu, 10);
+        } else {
+          ssMenu[index].removeAttribute("style");
+          ssMenu[index].classList.add("active");
+        }
       } else {
-        ssMenu[index].removeAttribute("style");
-        ssMenu[index].classList.add("active");
-      }
-    } else {
-      ssMenu[index].classList.remove("active");
-      if (currentHeight * 10 > 0) {
-        ssMenu[index].style.height = currentHeight * 10 + "px";
-        currentHeight--;
-        setTimeout(callSMenu, 10);
-      } else {
-        ssMenu[index].removeAttribute("style");
+        ssMenu[index].classList.remove("active");
+        if (currentHeight * 10 > 0) {
+          ssMenu[index].style.height = currentHeight * 10 + "px";
+          currentHeight--;
+          setTimeout(callSMenu, 10);
+        } else {
+          ssMenu[index].removeAttribute("style");
+        }
       }
     }
   }
-}
 
-// sub menu in mobile
-else {
-  let menuBtn = document.querySelectorAll(".hB-Menu>li");
-  let subMenu = document.querySelectorAll(".submenu");
-  let menuChevron = document.querySelectorAll(".menuChevron");
-  let headerBottom = document.getElementById("headerBottom");
-  let mobileMenu = document.getElementById("mobileMenu");
+  // sub menu in mobile
+  else {
+    let menuBtn = document.querySelectorAll(".hB-Menu>li");
+    let subMenu = document.querySelectorAll(".submenu");
+    let menuChevron = document.querySelectorAll(".menuChevron");
+    let headerBottom = document.getElementById("headerBottom");
+    let mobileMenu = document.getElementById("mobileMenu");
 
-  mobileMenu.addEventListener("click", function () {
-    menuBtn.forEach((element, i) => {
-      if (this.classList.contains("active")) {
-        subMenu[i].classList.remove("active");
-        menuChevron[i].classList.remove("active");
-      }
-
-      this.classList.toggle("active");
-      headerBottom.classList.toggle("active");
-    });
-  });
-
-  menuBtn.forEach((elem, index) => {
-    elem.addEventListener("click", function () {
+    mobileMenu.addEventListener("click", function () {
       menuBtn.forEach((element, i) => {
-        if (i != index) {
+        if (this.classList.contains("active")) {
           subMenu[i].classList.remove("active");
           menuChevron[i].classList.remove("active");
         }
+
+        this.classList.toggle("active");
+        headerBottom.classList.toggle("active");
       });
-      subMenu[index].classList.toggle("active");
-      menuChevron[index].classList.toggle("active");
     });
-  });
+
+    menuBtn.forEach((elem, index) => {
+      elem.addEventListener("click", function () {
+        menuBtn.forEach((element, i) => {
+          if (i != index) {
+            subMenu[i].classList.remove("active");
+            menuChevron[i].classList.remove("active");
+          }
+        });
+        subMenu[index].classList.toggle("active");
+        menuChevron[index].classList.toggle("active");
+      });
+    });
+  }
 }
+fixMenuErrors()
+
 
 // fill likes heart after mouse over
 let likes = document.querySelectorAll(".like");

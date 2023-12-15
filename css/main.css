@@ -523,6 +523,9 @@ ul.submenuTop>li>a {
     text-decoration: none;
     color: var(--primaryBtn);
     line-height: 2;
+    text-align: start;
+    display: block;
+    width: max-content;
 }
 
 ul.submenuTop>li>a:hover {
@@ -587,6 +590,7 @@ ul.ssMenu {
     height: 0;
     overflow: hidden;
     transition: none !important;
+    text-align: start;
 }
 
 ul.ssMenu.active {
